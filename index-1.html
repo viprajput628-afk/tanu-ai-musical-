@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100d0a">
+<meta name="description" content="VPlay Kesariya — discover songs on YouTube and connect with our Telegram music community.">
+<title>VPlay Kesariya | Music Community</title>
+<style>
+:root{--bg:#100d0a;--panel:#1c1710;--gold:#f3c76a;--gold2:#d99a2b;--muted:#d0c5b1;--line:#4b3920}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at top,#30200e 0%,var(--bg) 55%);color:#fff8e9;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}
+header{padding:22px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px;font-size:clamp(20px,5vw,29px)}
+.crown{font-size:30px}
+.brand span:last-child{color:var(--gold)}
+main{width:min(920px,100%);margin:0 auto;padding:32px 18px 56px}
+.hero{text-align:center;padding:36px 18px 28px}
+.kicker{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:800}
+h1{font-size:clamp(32px,8vw,58px);line-height:1.08;margin:14px 0;color:var(--gold)}
+.subtitle{max-width:620px;margin:0 auto;color:var(--muted);line-height:1.7;font-size:16px}
+.card{background:linear-gradient(145deg,rgba(44,33,18,.98),rgba(24,19,13,.98));border:1px solid var(--line);border-radius:22px;padding:24px;margin:22px auto;box-shadow:0 18px 50px #0005}
+h2{margin:0 0 8px;font-size:23px}
+.desc{color:var(--muted);margin:0 0 18px;line-height:1.6}
+.search{display:flex;gap:10px;flex-wrap:wrap}
+input{flex:1;min-width:180px;background:#100d0a;border:1px solid #6d5227;color:white;padding:15px 14px;border-radius:12px;font-size:16px;outline:none}
+input:focus{border-color:var(--gold)}
+button,.button{border:0;border-radius:12px;padding:14px 18px;font-weight:800;font-size:15px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#201507}
+.telegram{background:#229ed9;color:white}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:18px}
+.tile{border:1px solid var(--line);border-radius:16px;padding:18px;background:#120f0b}
+.tile .emoji{font-size:27px}
+.tile h3{margin:10px 0 6px;color:var(--gold)}
+.tile p{margin:0;color:var(--muted);line-height:1.5;font-size:14px}
+footer{text-align:center;border-top:1px solid var(--line);padding:24px 16px;color:#b7a88f;font-size:13px}
+.note{font-size:12px;color:#b7a88f;line-height:1.6;margin-top:16px}
+@media(max-width:520px){.card{padding:19px}.search button{width:100%}.buttons .button{width:100%}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><span class="crown">👑</span><span>VPlay</span><span>Kesariya</span></div>
+</header>
+<main>
+  <section class="hero">
+    <div class="kicker">Royal Music Community</div>
+    <h1>Find Your Next Song</h1>
+    <p class="subtitle">Apne favourite songs YouTube par search karein aur music updates ke liye hamare Telegram bot se judein.</p>
+  </section>
+
+  <section class="card">
+    <h2>🎵 Song Search</h2>
+    <p class="desc">Song ya singer ka naam likhein. Search YouTube par khulega.</p>
+    <form class="search" id="songForm">
+      <input id="songQuery" type="search" placeholder="Jaise: Kesariya song, Arijit Singh..." aria-label="Song or singer name" required>
+      <button class="gold" type="submit">▶ Search YouTube</button>
+    </form>
+    <p class="note">Yeh page YouTube search results kholta hai; yahan songs host ya download nahi hote.</p>
+  </section>
+
+  <section class="card">
+    <h2>🤝 Join Our Community</h2>
+    <p class="desc">Telegram par VPlay Kesariya ke saath connect karein.</p>
+    <div class="buttons">
+      <a class="button telegram" href="https://t.me/tanumusicsbot" target="_blank" rel="noopener noreferrer">✈ Open @tanumusicsbot</a>
+      <a class="button gold" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">▶ Open YouTube</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Explore Music</h2>
+    <p class="desc">Ek category chunein aur YouTube par uski search kholein.</p>
+    <div class="grid">
+      <a class="tile" href="https://www.youtube.com/results?search_query=latest+Hindi+songs" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit"><div class="emoji">🎧</div><h3>Latest Hindi Songs</h3><p>Naye Hindi songs explore karein.</p></a>
+      <a class="tile" href="https://www.youtube.com/results?search_query=romantic+songs" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit"><div class="emoji">❤️</div><h3>Romantic</h3><p>Romantic music aur love songs.</p></a>
+      <a class="tile" href="https://www.youtube.com/results?search_query=Sad+Hindi+songs" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit"><div class="emoji">🌙</div><h3>Sad Songs</h3><p>Sad aur emotional songs.</p></a>
+      <a class="tile" href="https://www.youtube.com/results?search_query=Punjabi+hits" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit"><div class="emoji">🔥</div><h3>Punjabi Hits</h3><p>Punjabi music aur hits.</p></a>
+    </div>
+  </section>
+</main>
+<footer>© 2026 VPlay Kesariya · Music discovery and community</footer>
+<script>
+document.getElementById('songForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const q = document.getElementById('songQuery').value.trim();
+  if(q) window.open('https://www.youtube.com/results?search_query=' + encodeURIComponent(q), '_blank', 'noopener');
+});
+</script>
+</body>
+</html>
