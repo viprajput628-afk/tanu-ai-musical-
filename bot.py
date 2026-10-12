@@ -1,8 +1,20 @@
 
 import os
+import pyrogram.errors
 from pyrogram import Client, filters
+
+try:
+    if not hasattr(pyrogram.errors, "GroupcallForbidden"):
+        pyrogram.errors.GroupcallForbidden = (
+            pyrogram.errors.GroupCallForbidden
+        )
+except AttributeError:
+    class GroupcallForbidden(Exception):
+        pass
+
+    pyrogram.errors.GroupcallForbidden = GroupcallForbidden
+
 from pytgcalls import PyTgCalls
-from pytgcalls.types import MediaStream
 
 API_ID = int(os.environ["API_ID"])
 API_HASH = os.environ["API_HASH"]
