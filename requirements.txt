@@ -2,3 +2,4 @@ pyrogram
 tgcrypto
 py-tgcalls
 python-dotenv
+yt-dlp
